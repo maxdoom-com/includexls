@@ -32,7 +32,7 @@ class IncludeXLSPreprocessor(Preprocessor):
 
 
     def _incl(self, filename, pagenumber=0):
-        book = xlrd.open_workbook( os.path.join(self.path, filename), encoding_override = "utf-8")
+        book = xlrd.open_workbook( os.path.join(self.path, filename))
         sheet = book.sheet_by_index(pagenumber)
 
         lines = []
